@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplifyb801969a4bbe4-staging-185117-authRole",
+      "UnauthRoleArn": "arn:aws:iam::316503711628:role/amplify-amplifyb801969a4bbe4-staging-185117-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::316503711628:role/amplify-amplifyb801969a4bbe4-staging-185117-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-amplifyb801969a4bbe4-staging-185117-deployment",
+      "UnauthRoleName": "amplify-amplifyb801969a4bbe4-staging-185117-unauthRole",
+      "StackName": "amplify-amplifyb801969a4bbe4-staging-185117",
+      "StackId": "arn:aws:cloudformation:us-east-1:316503711628:stack/amplify-amplifyb801969a4bbe4-staging-185117/53eba200-e463-11ed-8597-0efe77a5c30f",
+      "AmplifyAppId": "d3a0fv5ixfl9hq"
+    },
+    "categories": {
+      "auth": {
+        "groundedrecipes": {}
+      }
+    }
+  }
+}
