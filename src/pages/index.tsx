@@ -1,12 +1,24 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
+import { Amplify } from "aws-amplify";
 
-const inter = Inter({ subsets: ["latin"] });
+import { Authenticator, Flex, View } from "@aws-amplify/ui-react";
+import "@aws-amplify/ui-react/styles.css";
 
-export default function Home() {
+import awsExports from "../aws-exports";
+Amplify.configure(awsExports);
+
+export default function App() {
   return (
-    <main>
-      <p className={inter.className}>Grounded recipes</p>
-    </main>
+    <View height="100%" width="100%">
+      <Flex justifyContent="center" alignItems="center">
+        <Authenticator>
+          {({ signOut, user }) => (
+            <main>
+              <h1>Hello {user?.username}</h1>
+              <button onClick={signOut}>Sign out</button>
+            </main>
+          )}
+        </Authenticator>
+      </Flex>
+    </View>
   );
 }
