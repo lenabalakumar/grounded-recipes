@@ -8,17 +8,21 @@ Amplify.configure(awsExports);
 
 export default function App() {
   return (
-    <View height="100%" width="100%">
-      <Flex justifyContent="center" alignItems="center">
-        <Authenticator>
-          {({ signOut, user }) => (
-            <main>
-              <h1>Hello {user?.username}</h1>
-              <button onClick={signOut}>Sign out</button>
-            </main>
-          )}
-        </Authenticator>
-      </Flex>
-    </View>
+    // <View height="100vh" width="100vw">
+    <Flex
+      justifyContent="center"
+      backgroundColor="rgba(121,122,233)"
+      height="100vh"
+    >
+      <Authenticator>
+        {({ signOut, user }) => (
+          <main>
+            <h1>Hello {user?.attributes?.email}</h1>
+            <button onClick={signOut}>Sign out</button>
+          </main>
+        )}
+      </Authenticator>
+    </Flex>
+    // </View>
   );
 }
